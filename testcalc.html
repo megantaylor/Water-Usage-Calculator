@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title>Water Calculator</title>
+	<script type="text/javascript">
+		function addit() {
+			var shower = document.getElementById('shower');
+			var bath = document.getElementById('bath');
+			var faucet = document.getElementById('faucet');
+			var washing = document.getElementById('washing');
+			var dishwasher = document.getElementById('dishwasher');
+			var lawn = document.getElementById('lawn');
+			var toilet = document.getElementById('toilet');
+			var toothbrushing = document.getElementById('toothbrushing');
+			var handwashing = document.getElementById('handwashing');
+			var shower_total = shower.value * 7;
+			var bath_total = bath.value * 32;
+			var faucet_total = faucet.value * 3;
+			var washing_total = washing.value * 48;
+			var dishwasher_total = dishwasher.value * 15;
+			var lawn_total = lawn.value * 5;
+			var toilet_total = toilet.value * 6;
+			var toothbrushing_total = toothbrushing.value * 3;
+			var handwashing_total = handwashing.value * 3;
+			var total = shower_total + bath_total + faucet_total + washing_total + dishwasher_total + lawn_total + toilet_total + toothbrushing_total + handwashing_total;
+			document.getElementById('explainer').innerHTML='You are using a total of <span class="gallons">' + total + '</span> gallons of water.';
+		};
+	</script>
+	<style>
+	    span.gallons{color:#0021a5;}
+	</style>
+</head>
+<body>
+<div style="width:700px; margin:0px auto;">
+<form action="" id="waterform" onsubmit="return false;">
+<fieldset>
+                <legend>Calculate your daily water usage</legend>
+<label>How many minutes do you spend in the shower?</label> <input type="text" id="shower" onchange="addit()"> <br />
+<label>How many times do you take a bath?</label> <input type="text" id="bath" onchange="addit()"> <br />
+<label>How many minutes do you leave the faucet running?</label> <input type="text" id="faucet" onchange="addit()"> <br />
+<label>How many times do you run the washing machine?</label> <input type="text" id="washing" onchange="addit()"> <br />
+<label>How many times do you run the dishwasher?</label> <input type="text" id="dishwasher" onchange="addit()"> <br />
+<label>How many minutes do you spend watering your lawn?</label> <input type="text" id="lawn" onchange="addit()"> <br />
+<label>How many times do you flush the toilet?</label> <input type="text" id="toilet" onchange="addit()"> <br />
+<label>How many minutes do you spend brushing your teeth with the water on?</label> <input type="text" id="toothbrushing" onchange="addit()"> <br />
+<label>How many minutes do you spend washing your hands?</label> <input type="text" id="handwashing" onchange="addit()"> 
+                </fieldset>
+</form>
+
+	<input type="submit" value="Calculate!" onClick='addit()'>
+	
+    <!-- I'll make these empty but the elements still exist so I an get them -->
+    <p id="explainer"></p>
+    <div id="payoff"></div>
+</div>
+</body>
+</html>
