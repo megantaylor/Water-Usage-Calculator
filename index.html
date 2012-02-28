@@ -22,7 +22,7 @@
 			var toothbrushing_total = toothbrushing.value * 3;
 			var handwashing_total = handwashing.value * 3;
 			var total = shower_total + bath_total + faucet_total + washing_total + dishwasher_total + lawn_total + toilet_total + toothbrushing_total + handwashing_total;
-			document.getElementById('explainer').innerHTML='You are using a total of <span class="gallons">' + total + '</span> gallons of water.';
+			document.getElementById('result').innerHTML='You are using a total of <span class="gallons">' + total + '</span> gallons of water.';
 		};
 	</script>
 	<style>
@@ -48,9 +48,7 @@
 
 	<input type="submit" value="Calculate!" onClick='addit()'>
 	
-    <!-- I'll make these empty but the elements still exist so I an get them -->
-    <p id="explainer"></p>
-    <div id="payoff"></div>
+    <p id="result"></p>
 </div>
 </body>
 </html>
