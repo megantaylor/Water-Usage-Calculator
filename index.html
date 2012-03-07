@@ -11,15 +11,18 @@
 			var toilet = document.getElementById('toilet');
 			var toothbrushing = document.getElementById('toothbrushing');
 			var handwashing = document.getElementById('handwashing');
-			var shower_total = (shower.value * 7) * 7;
+			var shower_daily = shower.value * 7;
+			var shower_total = shower_daily *7;
 			var bath_total = bath.value * 32;
 			var washing_total = washing.value * 48;
 			var dishwasher_total = dishwasher.value * 15;
 			var lawn_total = lawn.value * 5;
-			var toilet_total = (toilet.value * 6) * 7;
-			var toothbrushing_total = (toothbrushing.value * 3) * 7;
+			var toilet_daily = toilet.value * 6;
+			var toilet_total = toilet_daily * 7;
+			var toothbrushing_daily = toothbrushing.value * 3;
+			var toothbrushing_total = toothbrushing_daily * 7;
 			var handwashing_total = handwashing.value * 3.5;
-			var total = shower_total + bath_total + faucet_total + washing_total + dishwasher_total + lawn_total + toilet_total + toothbrushing_total + handwashing_total;
+			var total = shower_total + bath_total + washing_total + dishwasher_total + lawn_total + toilet_total + toothbrushing_total + handwashing_total;
 			document.getElementById('result').innerHTML='You are using a total of <span class="gallons">' + total + '</span> gallons of water.';
 		};
 	</script>
