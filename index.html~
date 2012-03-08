@@ -12,7 +12,7 @@
 			var toothbrushing = document.getElementById('toothbrushing');
 			var handwashing = document.getElementById('handwashing');
 			var shower_daily = shower.value * 7;
-			var shower_total = shower_daily * 7;
+			var shower_total = shower_daily *7;
 			var bath_total = bath.value * 32;
 			var washing_total = washing.value * 48;
 			var dishwasher_total = dishwasher.value * 15;
